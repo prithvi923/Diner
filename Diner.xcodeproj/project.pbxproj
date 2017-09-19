@@ -12,9 +12,12 @@
 		DCDAC7011F70D7CB00424DE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDAC6FF1F70D7CB00424DE9 /* Main.storyboard */; };
 		DCDAC7031F70D7CB00424DE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCDAC7021F70D7CB00424DE9 /* Assets.xcassets */; };
 		DCDAC7061F70D7CB00424DE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDAC7041F70D7CB00424DE9 /* LaunchScreen.storyboard */; };
+		FD7B2606BF363BCBDB6E51F8 /* Pods_Diner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB05FD71832A88061B1015 /* Pods_Diner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4EC1A94C2F71C3D973B19407 /* Pods-Diner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Diner/Pods-Diner.release.xcconfig"; sourceTree = "<group>"; };
+		5EFCF2A881CAF81F9970EC3D /* Pods-Diner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Diner/Pods-Diner.debug.xcconfig"; sourceTree = "<group>"; };
 		DCDAC6F81F70D7CB00424DE9 /* Diner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDAC6FB1F70D7CB00424DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		DCDAC7021F70D7CB00424DE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCDAC7051F70D7CB00424DE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCDAC7071F70D7CB00424DE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDCB05FD71832A88061B1015 /* Pods_Diner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7B2606BF363BCBDB6E51F8 /* Pods_Diner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B1178340D4122A5E4A8BCC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDCB05FD71832A88061B1015 /* Pods_Diner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		968C8FD4E944EB8E111F7613 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5EFCF2A881CAF81F9970EC3D /* Pods-Diner.debug.xcconfig */,
+				4EC1A94C2F71C3D973B19407 /* Pods-Diner.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DCDAC6EF1F70D7CB00424DE9 = {
 			isa = PBXGroup;
 			children = (
 				DCDAC6FA1F70D7CB00424DE9 /* Diner */,
 				DCDAC6F91F70D7CB00424DE9 /* Products */,
+				968C8FD4E944EB8E111F7613 /* Pods */,
+				1B1178340D4122A5E4A8BCC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DCDAC70A1F70D7CB00424DE9 /* Build configuration list for PBXNativeTarget "Diner" */;
 			buildPhases = (
+				FB07360D5CDF18F331603CE3 /* [CP] Check Pods Manifest.lock */,
 				DCDAC6F41F70D7CB00424DE9 /* Sources */,
 				DCDAC6F51F70D7CB00424DE9 /* Frameworks */,
 				DCDAC6F61F70D7CB00424DE9 /* Resources */,
+				051800DEA923C0858B99F51B /* [CP] Embed Pods Frameworks */,
+				E58982AB25F206954B641F4E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		051800DEA923C0858B99F51B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Diner/Pods-Diner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Diner/Pods-Diner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E58982AB25F206954B641F4E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Diner/Pods-Diner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB07360D5CDF18F331603CE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Diner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DCDAC6F41F70D7CB00424DE9 /* Sources */ = {
@@ -259,6 +340,7 @@
 		};
 		DCDAC70B1F70D7CB00424DE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EFCF2A881CAF81F9970EC3D /* Pods-Diner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 238UFQK4XS;
@@ -272,6 +354,7 @@
 		};
 		DCDAC70C1F70D7CB00424DE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EC1A94C2F71C3D973B19407 /* Pods-Diner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 238UFQK4XS;
