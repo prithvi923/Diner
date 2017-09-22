@@ -15,7 +15,7 @@ class Business {
     let imageURL: URL?
     let categories: String?
     let distance: String?
-    let ratingImageURL: URL?
+    let stars: NSNumber?
     let reviewCount: NSNumber?
     
     init(from: NSDictionary) {
@@ -31,26 +31,16 @@ class Business {
         let location = from["location"] as? NSDictionary
         var address = ""
         if location != nil {
-            let addressArray = location!["address"] as? NSArray
-            if addressArray != nil && addressArray!.count > 0 {
-                address = addressArray![0] as! String
-            }
-            
-            let neighborhoods = location!["neighborhoods"] as? NSArray
-            if neighborhoods != nil && neighborhoods!.count > 0 {
-                if !address.isEmpty {
-                    address += ", "
-                }
-                address += neighborhoods![0] as! String
-            }
+            let firstPart = location!["display_address"] as! [String]
+            address = firstPart[0]
         }
         self.address = address
         
-        let categoriesArray = from["categories"] as? [[String]]
+        let categoriesArray = from["categories"] as? [NSDictionary]
         if categoriesArray != nil {
             var categoryNames = [String]()
             for category in categoriesArray! {
-                let categoryName = category[0]
+                let categoryName = category["title"] as! String
                 categoryNames.append(categoryName)
             }
             categories = categoryNames.joined(separator: ", ")
@@ -61,17 +51,12 @@ class Business {
         let distanceMeters = from["distance"] as? NSNumber
         if distanceMeters != nil {
             let milesPerMeter = 0.000621371
-            distance = String(format: "%.2f mi", milesPerMeter * distanceMeters!.doubleValue)
+            distance = String(format: "%.2fmi", milesPerMeter * distanceMeters!.doubleValue)
         } else {
             distance = nil
         }
         
-        let ratingImageURLString = from["rating_img_url_large"] as? String
-        if ratingImageURLString != nil {
-            ratingImageURL = URL(string: ratingImageURLString!)
-        } else {
-            ratingImageURL = nil
-        }
+        stars = from["rating"] as? NSNumber
         
         reviewCount = from["review_count"] as? NSNumber
         

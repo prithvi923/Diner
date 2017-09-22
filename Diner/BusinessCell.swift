@@ -13,11 +13,11 @@ class BusinessCell: UITableViewCell {
     
     @IBOutlet weak var businessAvatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var starLabel: UILabel!
     @IBOutlet weak var reviewsLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var categoriesLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var starLabel: UILabel!
     
     var business: Business! {
         didSet {
@@ -40,11 +40,11 @@ class BusinessCell: UITableViewCell {
     func updateLabels() {
         businessAvatarImageView.setImageWith(business.imageURL!)
         nameLabel.text = business.name!
-        
+        starLabel.text = "\(business.stars!)"
         reviewsLabel.text = "\(business.reviewCount!) Reviews"
         addressLabel.text = business.address!
         categoriesLabel.text = business.categories!
-        distanceLabel.text = "\(business.distance!)mi"
+        distanceLabel.text = business.distance!
     }
 
 }
