@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Diner-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Diner" customModuleProvider="target" sceneMemberID="viewController">
@@ -103,7 +103,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Diner" id="NUC-wR-Htu"/>
+                    <navigationItem key="navigationItem" id="NUC-wR-Htu"/>
                     <connections>
                         <outlet property="tableView" destination="2YK-Sp-Kuy" id="HEs-mT-GJu"/>
                     </connections>

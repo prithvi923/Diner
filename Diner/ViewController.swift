@@ -13,6 +13,8 @@ class ViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     var businesses = [Business]()
+    var searchController: UISearchController!
+    var yelpClient: Yelp!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +24,16 @@ class ViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120
         
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.delegate = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.sizeToFit()
+        navigationItem.titleView = searchController.searchBar
         
-        let yelp = Yelp()
-        yelp.search("Indian", completion: { (businesses: [Business]?, error: Error?) -> Void in
-            for business in businesses! {
-                print(business.name ?? "None")
-            }
+        
+        yelpClient = Yelp()
+        yelpClient.search("", completion: { (businesses: [Business]?, error: Error?) -> Void in
             self.businesses = businesses!
             self.tableView.reloadData()
         })
@@ -52,5 +58,14 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BusinessCell") as! BusinessCell
         cell.business = self.businesses[indexPath.row]
         return cell
+    }
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        yelpClient.search(searchBar.text!, completion: { (businesses: [Business]?, error: Error?) -> Void in
+            self.businesses = businesses!
+            self.tableView.reloadData()
+        })
     }
 }

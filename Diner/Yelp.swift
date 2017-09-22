@@ -23,7 +23,12 @@ class Yelp: NSObject, CLLocationManagerDelegate {
     
     func search(_ query: String, completion: @escaping ([Business]?, Error?) -> Void) {
         let searchURL = "https://api.yelp.com/v3/businesses/search"
-        let parameters = ["latitude": currentLat, "longitude": currentLong]
+        var parameters = ["latitude": currentLat, "longitude": currentLong] as [String: Any?]
+        
+        if query != "" {
+            parameters["term"] = query
+        }
+        
         var request = AFHTTPRequestSerializer().request(withMethod: "GET", urlString: searchURL, parameters: parameters, error: nil) as URLRequest
         request.addValue("Bearer \(authToken!)", forHTTPHeaderField: "Authorization")
         
