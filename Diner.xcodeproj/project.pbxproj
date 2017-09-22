@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCD2BE371F737BCC00FDADD0 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE361F737BCC00FDADD0 /* BusinessCell.swift */; };
+		DCD2BE391F74AAB700FDADD0 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE381F74AAB700FDADD0 /* Business.swift */; };
 		DCDAC6FC1F70D7CB00424DE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAC6FB1F70D7CB00424DE9 /* AppDelegate.swift */; };
 		DCDAC6FE1F70D7CB00424DE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */; };
 		DCDAC7011F70D7CB00424DE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDAC6FF1F70D7CB00424DE9 /* Main.storyboard */; };
 		DCDAC7031F70D7CB00424DE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCDAC7021F70D7CB00424DE9 /* Assets.xcassets */; };
 		DCDAC7061F70D7CB00424DE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDAC7041F70D7CB00424DE9 /* LaunchScreen.storyboard */; };
+		DCDAC7101F70DCA600424DE9 /* Yelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAC70F1F70DCA600424DE9 /* Yelp.swift */; };
+		DCDAC7121F70DD6700424DE9 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCDAC7111F70DD6700424DE9 /* Secrets.plist */; };
 		FD7B2606BF363BCBDB6E51F8 /* Pods_Diner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB05FD71832A88061B1015 /* Pods_Diner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4EC1A94C2F71C3D973B19407 /* Pods-Diner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Diner/Pods-Diner.release.xcconfig"; sourceTree = "<group>"; };
 		5EFCF2A881CAF81F9970EC3D /* Pods-Diner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Diner/Pods-Diner.debug.xcconfig"; sourceTree = "<group>"; };
+		DCD2BE361F737BCC00FDADD0 /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
+		DCD2BE381F74AAB700FDADD0 /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		DCDAC6F81F70D7CB00424DE9 /* Diner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDAC6FB1F70D7CB00424DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +31,8 @@
 		DCDAC7021F70D7CB00424DE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCDAC7051F70D7CB00424DE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCDAC7071F70D7CB00424DE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCDAC70F1F70DCA600424DE9 /* Yelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yelp.swift; sourceTree = "<group>"; };
+		DCDAC7111F70DD6700424DE9 /* Secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		FDCB05FD71832A88061B1015 /* Pods_Diner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -79,11 +87,15 @@
 			isa = PBXGroup;
 			children = (
 				DCDAC6FB1F70D7CB00424DE9 /* AppDelegate.swift */,
+				DCDAC70F1F70DCA600424DE9 /* Yelp.swift */,
+				DCD2BE381F74AAB700FDADD0 /* Business.swift */,
 				DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */,
 				DCDAC6FF1F70D7CB00424DE9 /* Main.storyboard */,
+				DCD2BE361F737BCC00FDADD0 /* BusinessCell.swift */,
 				DCDAC7021F70D7CB00424DE9 /* Assets.xcassets */,
 				DCDAC7041F70D7CB00424DE9 /* LaunchScreen.storyboard */,
 				DCDAC7071F70D7CB00424DE9 /* Info.plist */,
+				DCDAC7111F70DD6700424DE9 /* Secrets.plist */,
 			);
 			path = Diner;
 			sourceTree = "<group>";
@@ -151,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDAC7121F70DD6700424DE9 /* Secrets.plist in Resources */,
 				DCDAC7061F70D7CB00424DE9 /* LaunchScreen.storyboard in Resources */,
 				DCDAC7031F70D7CB00424DE9 /* Assets.xcassets in Resources */,
 				DCDAC7011F70D7CB00424DE9 /* Main.storyboard in Resources */,
@@ -219,6 +232,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCDAC6FE1F70D7CB00424DE9 /* ViewController.swift in Sources */,
+				DCD2BE371F737BCC00FDADD0 /* BusinessCell.swift in Sources */,
+				DCDAC7101F70DCA600424DE9 /* Yelp.swift in Sources */,
+				DCD2BE391F74AAB700FDADD0 /* Business.swift in Sources */,
 				DCDAC6FC1F70D7CB00424DE9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +401,7 @@
 				DCDAC70C1F70D7CB00424DE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
