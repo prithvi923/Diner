@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DCD2BE371F737BCC00FDADD0 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE361F737BCC00FDADD0 /* BusinessCell.swift */; };
 		DCD2BE391F74AAB700FDADD0 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE381F74AAB700FDADD0 /* Business.swift */; };
+		DCD2BE3B1F74DB0D00FDADD0 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE3A1F74DB0D00FDADD0 /* FilterViewController.swift */; };
 		DCDAC6FC1F70D7CB00424DE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAC6FB1F70D7CB00424DE9 /* AppDelegate.swift */; };
 		DCDAC6FE1F70D7CB00424DE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */; };
 		DCDAC7011F70D7CB00424DE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDAC6FF1F70D7CB00424DE9 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		5EFCF2A881CAF81F9970EC3D /* Pods-Diner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Diner/Pods-Diner.debug.xcconfig"; sourceTree = "<group>"; };
 		DCD2BE361F737BCC00FDADD0 /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		DCD2BE381F74AAB700FDADD0 /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		DCD2BE3A1F74DB0D00FDADD0 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		DCDAC6F81F70D7CB00424DE9 /* Diner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDAC6FB1F70D7CB00424DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				DCDAC7041F70D7CB00424DE9 /* LaunchScreen.storyboard */,
 				DCDAC7071F70D7CB00424DE9 /* Info.plist */,
 				DCDAC7111F70DD6700424DE9 /* Secrets.plist */,
+				DCD2BE3A1F74DB0D00FDADD0 /* FilterViewController.swift */,
 			);
 			path = Diner;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCD2BE3B1F74DB0D00FDADD0 /* FilterViewController.swift in Sources */,
 				DCDAC6FE1F70D7CB00424DE9 /* ViewController.swift in Sources */,
 				DCD2BE371F737BCC00FDADD0 /* BusinessCell.swift in Sources */,
 				DCDAC7101F70DCA600424DE9 /* Yelp.swift in Sources */,
