@@ -95,9 +95,10 @@ extension FilterViewController: SwitchCellDelegate {
             }
         case 1:
             if (newValue) {
-                newFilters.distance = (pref?.code)!
+                let value = Float(pref!.code)
+                newFilters.distance = Int(value! * 1609.34)
             } else {
-                newFilters.distance = ""
+                newFilters.distance = nil
             }
             return
         case 2:

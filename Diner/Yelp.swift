@@ -59,12 +59,12 @@ class Yelp: NSObject, CLLocationManagerDelegate {
     func search(_ query: String, withFilters: Filters, completion: @escaping ([Business]?, Error?) -> Void) {
         var parameters: [String: Any?] = [:]
         
-        if (withFilters.distance != "") {
-            parameters["distance"] = withFilters.distance
+        if (withFilters.distance != nil) {
+            parameters["radius"] = withFilters.distance
         }
         
         if (withFilters.sorter != "") {
-            parameters["sort_by"] = withFilters.sorter.lowercased()
+            parameters["sort_by"] = withFilters.sorter
         }
         
         if (withFilters.categories.count > 0) {

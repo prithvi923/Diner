@@ -11,6 +11,6 @@ import Foundation
 struct Filters {
     var categories: [String] = []
     var deal: Bool = false
-    var distance: String = ""
+    var distance: Int!
     var sorter: String = ""
 }
