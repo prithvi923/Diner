@@ -58,6 +58,7 @@ class ViewController: UIViewController {
         yelpClient.search(searchController.searchBar.text!, withFilters: filtersVC.newFilters ,completion: { (businesses: [Business]?, error: Error?) -> Void in
             self.businesses = businesses!
             self.tableView.reloadData()
+            self.filters = filtersVC.newFilters
         })
     }
 

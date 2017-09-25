@@ -33,6 +33,7 @@ class SwitchCell: UITableViewCell {
     
     func updateLabels() {
         nameLabel.text = preference.label
+        paramSwitch.isOn = preference.isSelected
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

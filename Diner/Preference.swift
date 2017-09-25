@@ -11,6 +11,7 @@ import Foundation
 struct Preference {
     var label: String = ""
     var code: String = ""
+    var isSelected: Bool = false
     
     init(label: String, code: String) {
         self.code = code

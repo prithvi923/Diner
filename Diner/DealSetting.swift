@@ -11,9 +11,10 @@ import Foundation
 class Deal: Setting {
     var name: String = ""
     
-    var preferences: [Preference] {
-        get {
-            return [Preference(label: "Offering a Deal", code: "deals")]
-        }
+    var preferences: [Preference]
+    
+    init(_ isSelected: Bool) {
+        self.preferences = [Preference(label: "Offering a Deal", code: "deals")]
+        self.preferences[0].isSelected = isSelected
     }
 }

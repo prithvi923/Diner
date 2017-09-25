@@ -11,14 +11,19 @@ import Foundation
 class Sort: Setting {
     var name: String = "Sort By"
     
-    var preferences: [Preference] {
-        get {
-            return [
-                Preference(label: "Distance", code: "distance"),
-                Preference(label: "Best Match", code: "best_match"),
-                Preference(label: "Review Count", code: "review_count"),
-                Preference(label: "Rating", code: "rating")
-            ]
+    var preferences: [Preference]
+    
+    init(_ isSelected: String) {
+        self.preferences = [
+            Preference(label: "Distance", code: "distance"),
+            Preference(label: "Best Match", code: "best_match"),
+            Preference(label: "Review Count", code: "review_count"),
+            Preference(label: "Rating", code: "rating")
+        ]
+        for index in 0..<preferences.count {
+            if preferences[index].code == isSelected {
+                preferences[index].isSelected = true
+            }
         }
     }
 }

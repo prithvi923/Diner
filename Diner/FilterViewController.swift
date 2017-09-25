@@ -22,10 +22,10 @@ class FilterViewController: UIViewController {
         
         tableView.dataSource = self
         
-        settings.append(Deal())
-        settings.append(Distance())
-        settings.append(Sort())
-        settings.append(Category())
+        settings.append(Deal(filters.deal))
+        settings.append(Distance(filters.distance))
+        settings.append(Sort(filters.sorter))
+        settings.append(Category(filters.categories))
         
         newFilters = filters
         // Do any additional setup after loading the view.
@@ -95,10 +95,9 @@ extension FilterViewController: SwitchCellDelegate {
             }
         case 1:
             if (newValue) {
-                let value = Float(pref!.code)
-                newFilters.distance = Int(value! * 1609.34)
+                newFilters.distance = pref!.code
             } else {
-                newFilters.distance = nil
+                newFilters.distance = ""
             }
             return
         case 2:

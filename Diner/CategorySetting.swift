@@ -11,13 +11,21 @@ import Foundation
 class Category: Setting {
     var name: String = "Category"
     
-    var preferences: [Preference] {
-        get {
-            return [
-                Preference(label: "Afghan", code: "afghani"),
-                Preference(label: "Indian", code: "indpak"),
-                Preference(label: "Mediterranean", code: "mediterranean")
-            ]
+    var preferences: [Preference]
+    
+    init(_ selected: [String]) {
+        self.preferences = [
+            Preference(label: "Afghan", code: "afghani"),
+            Preference(label: "Indian", code: "indpak"),
+            Preference(label: "Mediterranean", code: "mediterranean")
+        ]
+        
+        for index in 0..<preferences.count {
+            for select in selected {
+                if preferences[index].code == select {
+                    preferences[index].isSelected = true
+                }
+            }
         }
     }
 }
