@@ -21,15 +21,17 @@ class Yelp: NSObject, CLLocationManagerDelegate {
         getAuth()
     }
     
-    func search(_ query: String, completion: @escaping ([Business]?, Error?) -> Void) {
+    func search(_ query: String, parameters: [String: Any?], completion: @escaping ([Business]?, Error?) -> Void) {
         let searchURL = "https://api.yelp.com/v3/businesses/search"
-        var parameters = ["latitude": currentLat, "longitude": currentLong] as [String: Any?]
+        var myParameters = parameters
+        myParameters["latitude"] = currentLat
+        myParameters["longitude"] = currentLong
         
         if query != "" {
-            parameters["term"] = query
+            myParameters["term"] = query
         }
         
-        var request = AFHTTPRequestSerializer().request(withMethod: "GET", urlString: searchURL, parameters: parameters, error: nil) as URLRequest
+        var request = AFHTTPRequestSerializer().request(withMethod: "GET", urlString: searchURL, parameters: myParameters, error: nil) as URLRequest
         request.addValue("Bearer \(authToken!)", forHTTPHeaderField: "Authorization")
         
         let session = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: OperationQueue.main)
@@ -37,13 +39,42 @@ class Yelp: NSObject, CLLocationManagerDelegate {
         let task = session.dataTask(with: request, completionHandler: { (maybeData, success, error) in
             let data = try! JSONSerialization.jsonObject(with: maybeData!)
             if let responseData = data as? NSDictionary {
+                print(responseData)
                 if let businesses = responseData["businesses"] as? [NSDictionary] {
+                    print(businesses)
                     completion(Business.businesses(array: businesses), nil)
                 }
             }
         })
         
         task.resume()
+    }
+    
+    func search(completion: @escaping ([Business]?, Error?) -> Void) {
+        self.search("", parameters: [:], completion: completion)
+    }
+    
+    func search(_ query: String, completion: @escaping ([Business]?, Error?) -> Void) {
+        self.search(query, parameters: [:], completion: completion)
+    }
+    
+    func search(_ query: String, withFilters: Filters, completion: @escaping ([Business]?, Error?) -> Void) {
+        var parameters: [String: Any?] = [:]
+        
+        if (withFilters.distance != "") {
+            parameters["distance"] = withFilters.distance
+        }
+        
+        if (withFilters.sorter != "") {
+            parameters["sort_by"] = withFilters.sorter.lowercased()
+        }
+        
+        if (withFilters.categories.count > 0) {
+            parameters["categories"] = withFilters.categories.joined(separator: ",")
+        }
+        
+        self.search(query, parameters: parameters, completion: completion)
+    
     }
     
     func getAuth() {

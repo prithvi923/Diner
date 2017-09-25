@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     var searchController: UISearchController!
     var yelpClient: Yelp!
     
+    var filters = Filters()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,7 +35,7 @@ class ViewController: UIViewController {
         
         
         yelpClient = Yelp()
-        yelpClient.search("", completion: { (businesses: [Business]?, error: Error?) -> Void in
+        yelpClient.search(completion: { (businesses: [Business]?, error: Error?) -> Void in
             self.businesses = businesses!
             self.tableView.reloadData()
         })
@@ -43,6 +45,20 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? FilterViewController {
+            vc.filters = filters
+        }
+    }
+    
+    @IBAction func unwindToMainVC(segue: UIStoryboardSegue) {
+        let filtersVC = segue.source as! FilterViewController
+        yelpClient.search(searchController.searchBar.text!, withFilters: filtersVC.newFilters ,completion: { (businesses: [Business]?, error: Error?) -> Void in
+            self.businesses = businesses!
+            self.tableView.reloadData()
+        })
     }
 
 

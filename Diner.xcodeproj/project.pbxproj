@@ -10,6 +10,8 @@
 		DCD2BE371F737BCC00FDADD0 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE361F737BCC00FDADD0 /* BusinessCell.swift */; };
 		DCD2BE391F74AAB700FDADD0 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE381F74AAB700FDADD0 /* Business.swift */; };
 		DCD2BE3B1F74DB0D00FDADD0 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE3A1F74DB0D00FDADD0 /* FilterViewController.swift */; };
+		DCD2BE3D1F78762400FDADD0 /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE3C1F78762400FDADD0 /* SwitchCell.swift */; };
+		DCD2BE3F1F7876FA00FDADD0 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE3E1F7876FA00FDADD0 /* Filters.swift */; };
 		DCDAC6FC1F70D7CB00424DE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAC6FB1F70D7CB00424DE9 /* AppDelegate.swift */; };
 		DCDAC6FE1F70D7CB00424DE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */; };
 		DCDAC7011F70D7CB00424DE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDAC6FF1F70D7CB00424DE9 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 		DCD2BE361F737BCC00FDADD0 /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		DCD2BE381F74AAB700FDADD0 /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		DCD2BE3A1F74DB0D00FDADD0 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		DCD2BE3C1F78762400FDADD0 /* SwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
+		DCD2BE3E1F7876FA00FDADD0 /* Filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		DCDAC6F81F70D7CB00424DE9 /* Diner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDAC6FB1F70D7CB00424DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 				DCD2BE381F74AAB700FDADD0 /* Business.swift */,
 				DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */,
 				DCDAC6FF1F70D7CB00424DE9 /* Main.storyboard */,
+				DCD2BE3E1F7876FA00FDADD0 /* Filters.swift */,
+				DCD2BE3C1F78762400FDADD0 /* SwitchCell.swift */,
 				DCD2BE361F737BCC00FDADD0 /* BusinessCell.swift */,
 				DCDAC7021F70D7CB00424DE9 /* Assets.xcassets */,
 				DCDAC7041F70D7CB00424DE9 /* LaunchScreen.storyboard */,
@@ -235,8 +241,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCD2BE3B1F74DB0D00FDADD0 /* FilterViewController.swift in Sources */,
+				DCD2BE3F1F7876FA00FDADD0 /* Filters.swift in Sources */,
 				DCDAC6FE1F70D7CB00424DE9 /* ViewController.swift in Sources */,
 				DCD2BE371F737BCC00FDADD0 /* BusinessCell.swift in Sources */,
+				DCD2BE3D1F78762400FDADD0 /* SwitchCell.swift in Sources */,
 				DCDAC7101F70DCA600424DE9 /* Yelp.swift in Sources */,
 				DCD2BE391F74AAB700FDADD0 /* Business.swift in Sources */,
 				DCDAC6FC1F70D7CB00424DE9 /* AppDelegate.swift in Sources */,
