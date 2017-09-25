@@ -57,28 +57,41 @@ class Yelp: NSObject, CLLocationManagerDelegate {
     }
     
     func search(_ query: String, withFilters: Filters, completion: @escaping ([Business]?, Error?) -> Void) {
-        var parameters: [String: Any?] = [:]
+        let parameters = prepFilters(withFilters)
         
-        if (withFilters.distance != "") {
-            let value = Float(withFilters.distance)
+        self.search(query, parameters: parameters, completion: completion)
+    
+    }
+    
+    func search(_ query: String, withFilters: Filters, offset: Int, completion: @escaping ([Business]?, Error?) -> Void) {
+        var parameters = prepFilters(withFilters)
+        parameters["offset"] = offset
+        
+        self.search(query, parameters: parameters, completion: completion)
+        
+    }
+    
+    func prepFilters(_ filters: Filters) -> [String: Any?] {
+        var parameters: [String: Any?] = [:]
+        if (filters.distance != "") {
+            let value = Float(filters.distance)
             let meters = Int(value! * 1609.34)
             parameters["radius"] = meters
         }
         
-        if (withFilters.sorter != "") {
-            parameters["sort_by"] = withFilters.sorter
+        if (filters.sorter != "") {
+            parameters["sort_by"] = filters.sorter
         }
         
-        if (withFilters.categories.count > 0) {
-            parameters["categories"] = withFilters.categories.joined(separator: ",")
+        if (filters.categories.count > 0) {
+            parameters["categories"] = filters.categories.joined(separator: ",")
         }
         
-        if (withFilters.deal) {
+        if (filters.deal) {
             parameters["attributes"] = "deals"
         }
         
-        self.search(query, parameters: parameters, completion: completion)
-    
+        return parameters
     }
     
     func getAuth() {
