@@ -39,9 +39,7 @@ class Yelp: NSObject, CLLocationManagerDelegate {
         let task = session.dataTask(with: request, completionHandler: { (maybeData, success, error) in
             let data = try! JSONSerialization.jsonObject(with: maybeData!)
             if let responseData = data as? NSDictionary {
-                print(responseData)
                 if let businesses = responseData["businesses"] as? [NSDictionary] {
-                    print(businesses)
                     completion(Business.businesses(array: businesses), nil)
                 }
             }
@@ -71,6 +69,10 @@ class Yelp: NSObject, CLLocationManagerDelegate {
         
         if (withFilters.categories.count > 0) {
             parameters["categories"] = withFilters.categories.joined(separator: ",")
+        }
+        
+        if (withFilters.deal) {
+            parameters["attributes"] = "deals"
         }
         
         self.search(query, parameters: parameters, completion: completion)

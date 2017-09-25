@@ -13,6 +13,11 @@
 		DCD2BE3D1F78762400FDADD0 /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE3C1F78762400FDADD0 /* SwitchCell.swift */; };
 		DCD2BE3F1F7876FA00FDADD0 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE3E1F7876FA00FDADD0 /* Filters.swift */; };
 		DCD2BE411F78A9B400FDADD0 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE401F78A9B400FDADD0 /* Preference.swift */; };
+		DCD2BE441F78B7B500FDADD0 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE431F78B7B500FDADD0 /* Setting.swift */; };
+		DCD2BE461F78B84800FDADD0 /* DealSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE451F78B84800FDADD0 /* DealSetting.swift */; };
+		DCD2BE481F78B91500FDADD0 /* SortSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE471F78B91500FDADD0 /* SortSetting.swift */; };
+		DCD2BE4A1F78B96500FDADD0 /* DistanceSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE491F78B96500FDADD0 /* DistanceSetting.swift */; };
+		DCD2BE4C1F78B99700FDADD0 /* CategorySetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE4B1F78B99700FDADD0 /* CategorySetting.swift */; };
 		DCDAC6FC1F70D7CB00424DE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAC6FB1F70D7CB00424DE9 /* AppDelegate.swift */; };
 		DCDAC6FE1F70D7CB00424DE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */; };
 		DCDAC7011F70D7CB00424DE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDAC6FF1F70D7CB00424DE9 /* Main.storyboard */; };
@@ -32,6 +37,11 @@
 		DCD2BE3C1F78762400FDADD0 /* SwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
 		DCD2BE3E1F7876FA00FDADD0 /* Filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		DCD2BE401F78A9B400FDADD0 /* Preference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
+		DCD2BE431F78B7B500FDADD0 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		DCD2BE451F78B84800FDADD0 /* DealSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealSetting.swift; sourceTree = "<group>"; };
+		DCD2BE471F78B91500FDADD0 /* SortSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortSetting.swift; sourceTree = "<group>"; };
+		DCD2BE491F78B96500FDADD0 /* DistanceSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceSetting.swift; sourceTree = "<group>"; };
+		DCD2BE4B1F78B99700FDADD0 /* CategorySetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySetting.swift; sourceTree = "<group>"; };
 		DCDAC6F81F70D7CB00424DE9 /* Diner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDAC6FB1F70D7CB00424DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +83,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DCD2BE421F78B59E00FDADD0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DCD2BE401F78A9B400FDADD0 /* Preference.swift */,
+				DCD2BE431F78B7B500FDADD0 /* Setting.swift */,
+				DCD2BE451F78B84800FDADD0 /* DealSetting.swift */,
+				DCD2BE471F78B91500FDADD0 /* SortSetting.swift */,
+				DCD2BE491F78B96500FDADD0 /* DistanceSetting.swift */,
+				DCD2BE4B1F78B99700FDADD0 /* CategorySetting.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		DCDAC6EF1F70D7CB00424DE9 = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +117,9 @@
 		DCDAC6FA1F70D7CB00424DE9 /* Diner */ = {
 			isa = PBXGroup;
 			children = (
+				DCD2BE421F78B59E00FDADD0 /* Models */,
 				DCDAC6FB1F70D7CB00424DE9 /* AppDelegate.swift */,
 				DCDAC70F1F70DCA600424DE9 /* Yelp.swift */,
-				DCD2BE401F78A9B400FDADD0 /* Preference.swift */,
 				DCD2BE381F74AAB700FDADD0 /* Business.swift */,
 				DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */,
 				DCDAC6FF1F70D7CB00424DE9 /* Main.storyboard */,
@@ -243,14 +266,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCD2BE441F78B7B500FDADD0 /* Setting.swift in Sources */,
 				DCD2BE3B1F74DB0D00FDADD0 /* FilterViewController.swift in Sources */,
+				DCD2BE481F78B91500FDADD0 /* SortSetting.swift in Sources */,
 				DCD2BE3F1F7876FA00FDADD0 /* Filters.swift in Sources */,
+				DCD2BE4A1F78B96500FDADD0 /* DistanceSetting.swift in Sources */,
 				DCDAC6FE1F70D7CB00424DE9 /* ViewController.swift in Sources */,
 				DCD2BE371F737BCC00FDADD0 /* BusinessCell.swift in Sources */,
 				DCD2BE3D1F78762400FDADD0 /* SwitchCell.swift in Sources */,
 				DCDAC7101F70DCA600424DE9 /* Yelp.swift in Sources */,
 				DCD2BE391F74AAB700FDADD0 /* Business.swift in Sources */,
+				DCD2BE461F78B84800FDADD0 /* DealSetting.swift in Sources */,
 				DCD2BE411F78A9B400FDADD0 /* Preference.swift in Sources */,
+				DCD2BE4C1F78B99700FDADD0 /* CategorySetting.swift in Sources */,
 				DCDAC6FC1F70D7CB00424DE9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

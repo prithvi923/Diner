@@ -11,10 +11,8 @@ import UIKit
 class FilterViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var settings: [String: [Preference]] = [
-                                    "Distance": [Preference](),
-                                    "Sort By": [Preference](),
-                                    "Category": [Preference]()]
+    
+    var settings: Array = [Setting]()
     
     var filters: Filters!
     var newFilters: Filters!
@@ -24,25 +22,10 @@ class FilterViewController: UIViewController {
         
         tableView.dataSource = self
         
-        settings["Category"]?.append(contentsOf: [
-                Preference(label: "Afghan", code: "afghani"),
-                Preference(label: "Indian", code: "indpak"),
-                Preference(label: "Mediterranean", code: "mediterranean")
-            ])
-        
-        settings["Distance"]?.append(contentsOf: [
-                Preference(label: "0.3 mile", code: "0.3"),
-                Preference(label: "1 mile", code: "1"),
-                Preference(label: "5 miles", code: "5"),
-                Preference(label: "10 miles", code: "10")
-            ])
-        
-        settings["Sort By"]?.append(contentsOf: [
-            Preference(label: "Distance", code: "distance"),
-            Preference(label: "Best Match", code: "best_match"),
-            Preference(label: "Review Count", code: "review_count"),
-            Preference(label: "Rating", code: "rating")
-            ])
+        settings.append(Deal())
+        settings.append(Distance())
+        settings.append(Sort())
+        settings.append(Category())
         
         newFilters = filters
         // Do any additional setup after loading the view.
@@ -80,32 +63,12 @@ extension FilterViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return settings["Distance"]!.count
-        case 1:
-            return settings["Sort By"]!.count
-        case 2:
-            return settings["Category"]!.count
-        default:
-            return 0
-        }
+        return settings[section].preferences.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "switchCell") as! SwitchCell
-        var pref: Preference!
-        
-        switch indexPath.section {
-        case 0:
-            pref = (settings["Distance"]?[indexPath.row])!
-        case 1:
-            pref = settings["Sort By"]?[indexPath.row]
-        case 2:
-            pref = settings["Category"]?[indexPath.row]
-        default:
-            pref = Preference(label: "error", code: "error")
-        }
+        let pref = settings[indexPath.section].preferences[indexPath.row]
         cell.preference = pref
         cell.delegate = self
         
@@ -113,16 +76,7 @@ extension FilterViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "Distance"
-        case 1:
-            return "Sort By"
-        case 2:
-            return "Category"
-        default:
-            return ""
-        }
+        return settings[section].name
     }
     
 }
@@ -135,19 +89,25 @@ extension FilterViewController: SwitchCellDelegate {
         switch path!.section {
         case 0:
             if (newValue) {
+                newFilters.deal = true
+            } else {
+                newFilters.deal = false
+            }
+        case 1:
+            if (newValue) {
                 newFilters.distance = (pref?.code)!
             } else {
                 newFilters.distance = ""
             }
             return
-        case 1:
+        case 2:
             if (newValue) {
                 newFilters.sorter = (pref?.code)!
             } else {
                 newFilters.sorter = ""
             }
             return
-        case 2:
+        case 3:
             if (newValue) {
                 newFilters.categories.append((pref?.code)!)
             } else {
