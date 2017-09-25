@@ -18,11 +18,21 @@ class SwitchCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var paramSwitch: UISwitch!
     
+    var preference: Preference! {
+        didSet {
+            updateLabels()
+        }
+    }
+    
     weak var delegate: SwitchCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func updateLabels() {
+        nameLabel.text = preference.label
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

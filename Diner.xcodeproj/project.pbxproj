@@ -12,6 +12,7 @@
 		DCD2BE3B1F74DB0D00FDADD0 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE3A1F74DB0D00FDADD0 /* FilterViewController.swift */; };
 		DCD2BE3D1F78762400FDADD0 /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE3C1F78762400FDADD0 /* SwitchCell.swift */; };
 		DCD2BE3F1F7876FA00FDADD0 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE3E1F7876FA00FDADD0 /* Filters.swift */; };
+		DCD2BE411F78A9B400FDADD0 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE401F78A9B400FDADD0 /* Preference.swift */; };
 		DCDAC6FC1F70D7CB00424DE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAC6FB1F70D7CB00424DE9 /* AppDelegate.swift */; };
 		DCDAC6FE1F70D7CB00424DE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */; };
 		DCDAC7011F70D7CB00424DE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDAC6FF1F70D7CB00424DE9 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		DCD2BE3A1F74DB0D00FDADD0 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		DCD2BE3C1F78762400FDADD0 /* SwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
 		DCD2BE3E1F7876FA00FDADD0 /* Filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
+		DCD2BE401F78A9B400FDADD0 /* Preference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		DCDAC6F81F70D7CB00424DE9 /* Diner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDAC6FB1F70D7CB00424DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				DCDAC6FB1F70D7CB00424DE9 /* AppDelegate.swift */,
 				DCDAC70F1F70DCA600424DE9 /* Yelp.swift */,
+				DCD2BE401F78A9B400FDADD0 /* Preference.swift */,
 				DCD2BE381F74AAB700FDADD0 /* Business.swift */,
 				DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */,
 				DCDAC6FF1F70D7CB00424DE9 /* Main.storyboard */,
@@ -247,6 +250,7 @@
 				DCD2BE3D1F78762400FDADD0 /* SwitchCell.swift in Sources */,
 				DCDAC7101F70DCA600424DE9 /* Yelp.swift in Sources */,
 				DCD2BE391F74AAB700FDADD0 /* Business.swift in Sources */,
+				DCD2BE411F78A9B400FDADD0 /* Preference.swift in Sources */,
 				DCDAC6FC1F70D7CB00424DE9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
