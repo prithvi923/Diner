@@ -17,6 +17,8 @@ class Business {
     let distance: String?
     let stars: NSNumber?
     let reviewCount: NSNumber?
+    let latitude: NSNumber?
+    let longitude: NSNumber?
     
     init(from: NSDictionary) {
         name = from["name"] as? String
@@ -59,6 +61,15 @@ class Business {
         stars = from["rating"] as? NSNumber
         
         reviewCount = from["review_count"] as? NSNumber
+        
+        let coordinates = from["coordinates"] as? NSDictionary
+        if coordinates != nil {
+            latitude = coordinates?["latitude"] as? NSNumber
+            longitude = coordinates?["longitude"] as? NSNumber
+        } else {
+            latitude = 0
+            longitude = 0
+        }
         
     }
     

@@ -18,6 +18,7 @@
 		DCD2BE481F78B91500FDADD0 /* SortSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE471F78B91500FDADD0 /* SortSetting.swift */; };
 		DCD2BE4A1F78B96500FDADD0 /* DistanceSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE491F78B96500FDADD0 /* DistanceSetting.swift */; };
 		DCD2BE4C1F78B99700FDADD0 /* CategorySetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE4B1F78B99700FDADD0 /* CategorySetting.swift */; };
+		DCD2BE4E1F78D1C400FDADD0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD2BE4D1F78D1C400FDADD0 /* MapViewController.swift */; };
 		DCDAC6FC1F70D7CB00424DE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAC6FB1F70D7CB00424DE9 /* AppDelegate.swift */; };
 		DCDAC6FE1F70D7CB00424DE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */; };
 		DCDAC7011F70D7CB00424DE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDAC6FF1F70D7CB00424DE9 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		DCD2BE471F78B91500FDADD0 /* SortSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortSetting.swift; sourceTree = "<group>"; };
 		DCD2BE491F78B96500FDADD0 /* DistanceSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceSetting.swift; sourceTree = "<group>"; };
 		DCD2BE4B1F78B99700FDADD0 /* CategorySetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySetting.swift; sourceTree = "<group>"; };
+		DCD2BE4D1F78D1C400FDADD0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DCDAC6F81F70D7CB00424DE9 /* Diner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCDAC6FB1F70D7CB00424DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				DCD2BE381F74AAB700FDADD0 /* Business.swift */,
 				DCDAC6FD1F70D7CB00424DE9 /* ViewController.swift */,
 				DCDAC6FF1F70D7CB00424DE9 /* Main.storyboard */,
+				DCD2BE4D1F78D1C400FDADD0 /* MapViewController.swift */,
 				DCD2BE3E1F7876FA00FDADD0 /* Filters.swift */,
 				DCD2BE3C1F78762400FDADD0 /* SwitchCell.swift */,
 				DCD2BE361F737BCC00FDADD0 /* BusinessCell.swift */,
@@ -279,6 +282,7 @@
 				DCD2BE461F78B84800FDADD0 /* DealSetting.swift in Sources */,
 				DCD2BE411F78A9B400FDADD0 /* Preference.swift in Sources */,
 				DCD2BE4C1F78B99700FDADD0 /* CategorySetting.swift in Sources */,
+				DCD2BE4E1F78D1C400FDADD0 /* MapViewController.swift in Sources */,
 				DCDAC6FC1F70D7CB00424DE9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
